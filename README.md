@@ -3,11 +3,15 @@ official repository for team Erudite naijahacks 2018
 
 Team name: Erudite
 
-Team memebers: oladipupo O. Fredrick  fredrickksola@gmail.com,
+Team memebers: 
+                
+                oladipupo O. Fredrick  fredrickksola@gmail.com
 
                 Emeka Elo-Chukwuma    elochux@gmail.com,
                 
                 Arinze Okorji         arinzeokorji@gmail.com
+                
+                
                 
 Section:        Agriculture
 
