@@ -41,9 +41,9 @@
         // store all fields into variables
         $purpose = $request->sanitiseRequest($_POST['purpose']);
         $duration = $_POST['duration'];
-    
+   
 
-        $uploadRequest = $request->uploadInvestment($purpose, $duration);
+        $uploadRequest = $request->uploadInvestment($purpose, $duration, $userId);
         // if quotes already exists
         if (!$uploadRequest) {
           array_push($errorMessages, $serverError);
@@ -83,14 +83,13 @@
         </div>
         </div>
     <?php }; ?>
-    
+
       <div class="container">
 
       <div class="row">
           <div class="col-md-10 col-md-offset-1">
 
          
-<div class="spacer"></div>
           <div class="card card-signup">
             <h2 class="card-title text-center">Resources investment form</h2>
             <h6 class="text-center">All fields must be filled, Incomplete application will not be processed</h6>

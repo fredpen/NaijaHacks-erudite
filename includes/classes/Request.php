@@ -48,7 +48,7 @@
          // if not then push the request
          $dt = date("Y-m-d h:i:s");
 
-         $sql = "INSERT INTO farmer VALUES('', '$userId', '$product', '$location', '$size', '$age', '$dt', '$purpose', '$collateral', '$duration')";
+         $sql = "INSERT INTO investor VALUES('', '$userId', '$dt', '$purpose', '$duration')";
 
          $query = mysqli_query($this->con, $sql);
 
