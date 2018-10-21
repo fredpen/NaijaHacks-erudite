@@ -15,8 +15,8 @@
 
 		foreach ($requestArray as $row) {
 		$requestId = $row['id'];?>
-			 <div class="col-md-6">
-          <div class="card card-profile">
+			 <div class="col-md-4">
+          <div class="card card-image" style="height: 490px" >
             <div class="card-avatar">
               <a href="#">
 									<img class="img" src="assets/images/<?php echo $row['image'] ?>.jpeg">
@@ -30,11 +30,12 @@
               <p class="card-description">
                 Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
               </p>
-              <a href="request.php?id=<?php echo $requestId ?>">visit <?php echo $row["lastname"] . "'s farm"; ?></a>
+              <a class="btn btn-round btn-primary" href="request.php?id=<?php echo $requestId ?>">visit <?php echo $row["lastname"] . "'s farm"; ?></a>
             </div>
           </div>
         </div>
 
+  
 
 		
 

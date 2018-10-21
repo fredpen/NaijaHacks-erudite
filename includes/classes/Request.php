@@ -67,7 +67,7 @@
          // fetch all requests id
          $idArray = $this->fetchRequestId();
          // shuffle the id array
-         shuffle($idArray);
+         // shuffle($idArray);
          // loop and get the details of requests
          foreach ($idArray as $requestId) {
             array_push($requestArray, $this->fetchRequestDetails($requestId));
@@ -81,7 +81,7 @@
        public function fetchRequestId()
       {
          $idArray = [];
-         $sql = "SELECT id FROM farmer";
+         $sql = "SELECT id FROM farmer LIMIT 6";
          $query = mysqli_query($this->con, $sql);
          // push all the ids into an array
          while ($row = mysqli_fetch_array($query)) {
