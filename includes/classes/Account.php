@@ -32,14 +32,8 @@
 
          $query = "SELECT * FROM users WHERE password='$encryptedPassword' AND email='$email'";
          $results = mysqli_query($this->con, $query);
-
-         if (mysqli_num_rows($results) == 1) {
             return true;
-
-         }else {
-            array_push($this->errorArray, Constants::$loginFailed);
          }
-      }
 
            
 
@@ -105,12 +99,7 @@
          return;
          }
 
-         $query = mysqli_query($this->con, "SELECT * FROM users WHERE email ='$email'");
-         if (mysqli_num_rows($query) > 0) {
-            array_push($this->errorArray, Constants::$emailAlreadyExists);
-            return;
-         }
-
+       
       }
 
       // getting user insertUserDetails

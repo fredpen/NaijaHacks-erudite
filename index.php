@@ -4,55 +4,35 @@
   $requestArray = $request->fetchRequests();
 
 ?>
-	<div class="main-container">
-		<div class="frow">
-
+	<div class="container">
+		<div class="row">
+<div class="topMargin80></div>
 	<?php 
 	
 		foreach ($requestArray as $row) {
 		$requestId = $row['id'];?>
 		
-
-			<div class="quote-container">
-			  <div class="rotating-card-container manual-flip">
-				<div class="card card-rotate">
-				  <div class="front">
-					<div class="card-content">
-					
+	 <div class="col-md-4">
 					<!-- the quote  -->
-					  <p class="card-title">
-							<?php echo $row['content']; ?>
-					  </p>
-	
-					<!-- the quote genre -->
-					  <p class="card-description">
-						<div class="genreList">
-						  <span class="label label-primary">
-							<a class="genre" href='genre.php?genre=<?php echo $row['genre1'] ?>'><?php echo $row['genre1']; ?></a>
-						  </span>
-						  <span class="label label-info">
-							<a class="genre" href='genre.php?genre=<?php echo $row['genre2'] ?>'><?php echo $row['genre2']; ?></a>
-						  </span>
-						  <span class="label label-default">
-							<a class="genre" href='genre.php?genre=<?php echo $row['genre3'] ?>'><?php echo $row['genre3']; ?></a>
-						  </span>
-						</div>
-
-					<footer class="quote-footer">
-					 
-						   
-					</footer>
-					<!-- quotes author and image -->
-					<div class="footnote">
-					  <div class="author">
-						
-
+					<div class="card">
+            <div class="card-content">
+              <h5 class="category-social">
+									<i class="fa fa-newspaper-o"></i> TechCrunch
+								</h5>
+              <h4 class="card-title">
+									<a href="#pablo">"Focus on Your Employees"</a>
+								</h4>
+              <p class="card-description">
+                Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+              </p>
+              <div class="footer text-center">
+                <a href="#pablo" class="btn btn-white btn-round">Read Article</a>
+              </div>
+            </div>
+          </div>
 
 				</div>
-			  </div>
-			</div>
-		  </div>
-		</div>
+			
 		
 
 
