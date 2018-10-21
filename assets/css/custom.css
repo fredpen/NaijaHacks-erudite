@@ -6,6 +6,73 @@
    padding: 0;
 }
 
+.full-width-col  {
+   width: 100%;
+   padding: 0;
+}
+
+#bt-override .card{
+   background: transparent;
+}
+
+ #bt-override nav,
+ #bt-override .card-bg ,
+ .full-width-col {
+   border-bottom: solid 2px black;
+   color: white;
+   background: #0F2027;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#bt-override .card-header{
+   background: #f1f8fb26;
+}
+
+#bt-override .nav-link{
+   /* color: #ffffffe6; */
+}
+
+#bt-override .nav-link:hover{
+   color: #17a2b8a6;
+}
+
+
+#bt-override .jumbotron{
+   margin: 20px 0 0 0;
+   color: #f8f9fa;
+   background-image: url("../images/bgdjdj13.jpg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.horizontal-break{
+   overflow: visible;
+   height: 30px;
+   border-style: solid;
+   border-color: #1e37406b;
+   border-width: 1px 0 0;
+   border-radius: 20px;
+   width: 310px;
+}
+
+hr{
+   margin: 0 auto;
+}
+
+.horizontal-break:before{
+   margin: 0;
+   display: block;
+   content: "";
+   height: 30px;
+   margin-top: -31px;
+   border-style: solid;
+   border-color: #1e37406b;
+   border-width: 0 0 1px;
+   border-radius: 20px;
+}
+
 /* ---------------------------------------------------sign up */
 #bt-override .topMargin{
    margin-top: 98px;
@@ -65,3 +132,239 @@
     justify-content: center;
 }
 
+
+/* --------------------------------------index page --------------------------------------*/
+#home .rotating-card-container .manual-flip{
+  width: 100% !important;
+  height: unset !important;
+}
+
+p .like-image{
+   width: 25px;
+}
+
+#home .genre {
+   text-transform: capitalize;
+   color: white;
+   font-size: 11px;
+}
+
+.topMargin65{
+  margin-top: 65px;
+}
+.topMargin21{
+  margin-top: 21px;
+}
+
+.topPadding260{
+  padding-top: 260px;
+  color: white;
+}
+
+.genreSelection{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.genreSelect{
+  padding:5px 7px;
+  text-transform: capitalize;
+}
+
+#home .subscribe-line .card {
+    margin-top: 0;
+}
+
+/* sign up page */
+#signUpPage{
+   background-image: url(../images/bg7.jpg);
+   background-size: cover;
+   background-position: top center;
+   filter-color: purple;
+}
+
+#home .star{
+  color: red;
+  padding: 0px 7px;
+  font-size: 10px;
+}
+
+#home .message{
+  font-size: 9px;
+  color: #f44336;
+}
+
+#signUpPage .signUp{
+   background: white;
+}
+
+#home .pillButton{
+   width: 40%;
+   margin: 20px auto 0 auto;
+}
+
+#home .topMargin80{
+   margin-top: 80px;
+}
+
+#home .topMargin70{
+  margin-top: 70px;
+}
+
+
+#home .topMargin160{
+  margin-top: 160px;
+}
+
+
+#home .paddingTop30{
+  padding-top: 30px;
+}
+
+#home .genderSelection{
+   display: flex;
+}
+
+#home .purple{
+  color: purple;
+}
+
+#home .textBold{
+  color: #232323;
+  padding: 0 5px;
+}
+
+#home .quote-footer{
+   text-align: left;
+}
+
+#card-content{
+   height: 230px;
+   padding: 15px 15px;
+}
+
+p .like-image{
+   cursor: pointer;
+}
+
+div .profile-photo-small{
+   display: flex;
+   align-items: center;
+}
+
+.errorMessage{
+    display: block;
+    color: #e91e63;
+    font-size: 11px;
+    background: #8080801a;
+}
+
+.grace{
+   width: 150px;
+   height: 41px;
+   border-radius: 10px;
+   padding-left: 10px;
+   background: #9f59b1;
+   color: white;
+   font-size: 16px;
+}
+
+#home .tab-space{
+   padding: 20px 0 2px 0;
+}
+/*
+#home .subscribe-line{
+  padding: 0;
+}*/
+
+#card{
+    background: rgba(255,255,255,.15);
+    color: white;
+    text-transform: capitalize;
+    height: unset;
+}
+
+#home .displayNone{
+  display: none;
+}
+
+#home .close {
+     right: 0; 
+}
+
+/*the profile page*/
+#home .gif{
+  width: 25%;
+}
+
+/*footer */
+footer .container{
+  width: 100%;
+}
+
+
+/*--------------author page-----------------*/
+#home .wikiImg{
+  width: 100%;
+  height: 100px;
+}
+
+
+/*----------------authors----------------*/
+#home .maxwidth20{
+  max-width: 13%;
+}
+
+#home .author_nav{
+  position: fixed;
+  top: 49px;
+  width: 100%;
+  background: #211f1f;
+  min-height: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: #999999;
+  z-index: 2;
+}
+
+#home .label{
+  font-size: 1.2rem;
+  padding: 7px;
+}
+
+@media and screen and (min-width: 10px ) {
+  #home .label{
+    font-size: 1rem;
+  }
+
+  #home{
+    background: red;
+  }
+  /*#home .margin*/
+}
+
+#tables{
+  background: white;
+}
+
+#home .title_border{
+  border: solid 2px grey;
+}
+
+.white{
+  color: white;
+  font-size: 1em;
+}
+
+#home .spacer{
+  margin-top: 60px;
+  margin-bottom: 0px;
+}
+
+#errorDiv{
+  margin-bottom: 0;
+  background-color: #585858;
+}

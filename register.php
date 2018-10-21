@@ -36,22 +36,31 @@
 
             		<div class="info info-horizontal">
                   <div class="description">
-                    <h4 class="info-title purple">Words and sayings from books, quotes and poems readily available to you</h4>
+                    <h4 class="info-title">Farmer</h4>
+                    <p class="description">
+                       Request for financial or material resources needed to grow your farm; land, fertilizers, herbicides, seeds, machinery, even labour.
+                    </p>
                   </div>
-                </div>
+                    </div>
 
-                <div class="info info-horizontal">
+               <div class="info info-horizontal">
                   <div class="description">
-                    <h4 class="info-title purple">Exercpts to get you through difficult days</h4>
+                    <h4 class="info-title">Investor</h4>
+                    <p class="description">
+                   Negotiate with the farmer in terms of collateral, payment plan and interest ratesNegotiate with the farmer in terms of collateral, payment plan and interest rates
+                    </p>
                   </div>
-                </div>
+                    </div>
 
               <div class="info info-horizontal">
-          				<div class="description">
-          					<h4 class="info-title purple">Exercpts to get you through difficult days</h4>
-          				</div>
-              </div>
-            </div>
+                  <div class="description">
+                    <h4 class="info-title">Agriloan</h4>
+                    <p class="description">
+                      Verify the farm and the legitmacy of the investor's fund. Legally bind both parties with our team of qualified lawyers
+                    </p>
+                  </div>
+                    </div>
+                    </div>
 
 
               <div class="col-md-6">
@@ -93,7 +102,7 @@
                   <div class="form-group label-floating">
                     <?php echo errorGetter(Constants::$contact);
                          echo errorGetter(Constants::$contactAlreadyexists); ?>
-                    <label for="contact" class="control-label">Phone Numbercategory </label>
+                    <label for="contact" class="control-label">Phone Number </label>
                     <input type="text" class="form-control" name="contact" aria-describedby="contact" required value="<?php getInputValue('contact');?>">
                   </div>
 

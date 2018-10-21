@@ -1,11 +1,5 @@
 <?php
-   // redirecting function
-   function redirect_to($url) {
-    ob_start();
-    header('Location: '.$url);
-    ob_end_flush();
-    die();
-   }
+
    // keeping track of users in session
    if (isset($_SESSION['email'])) {
    $email =  $_SESSION['email'];
@@ -14,13 +8,11 @@
    $firstName = $userDetails['lastname'];
    $userId = $userDetails['id'];
 
-   $jsonfirstName = json_encode($firstName);
-   }  else {
-   $firstName = '';
+   }else{
+    $userDetails = "";
    }
 
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -29,7 +21,15 @@
    <link rel="icon" type="image/png" href="assets/images/logo.png">
    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-   <title>Erudite</title>
+    <title>Naijahacks - Team Erudite</title>
+
+   <!--     Fonts and icons     -->
+  <!--  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" /> -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+ <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
    <!-- CSS Files -->
    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -37,6 +37,8 @@
    <link href="assets/css/custom.css" rel="stylesheet"/>
    <link href="assets/css/grid.css" rel="stylesheet"/>
    
+    <!-- font awesome -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
    <!-- jquery script -->
    <script src="assets/js/jquery.min.js" type="text/javascript"></script>
 
@@ -44,7 +46,8 @@
 
  <!-- navbar-color-on-scroll" color-on-scroll=" " -->
 <body id="home" class="index-page">
-   <nav class="navbar navbar-default navbar-primary navbar-fixed-top" id="sectionsNav">
+
+  <nav class="navbar navbar-default navbar-primary navbar-fixed-top" id="sectionsNav">
       <div class="container">     
       <!-- Brand and toggle get grouped for better mobile display -->
          <div class="navbar-header">
@@ -54,36 +57,65 @@
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
             </button>
-               
-              <ul class="nav navbar-nav navbar-right">
-               <?php if ($firstName) { ?>
+            <a class="navbar-brand" href="index.php">
+               <i class="fas fa-home"></i> Agriloan 
+            </a>
+         </div>
+         <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+               <?php if ($userDetails) { ?>
                <li>
                   <a href="profilePage.php?id=<?php echo $userDetails['id']; ?>"><?php echo $userDetails['lastname']; ?>
                      <i class="fas fa-user-edit"></i>
                   </a>
                </li>
                <?php  }; ?>
-                                        <li class="divider"></li>
+               <li>
+                  <a href="blog/home.php">
+                     <i class="fas fa-newspaper"></i>  Investors 
+                  </a>
+               </li>
+               <li>
+                  <a href="authors.php">
+                  <i class="fas fa-book-reader"></i> Farmers</a>
+               </li>
+               <li>
+                  <a href="genre.php">About us</a>
+               </li>
+               <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                     <i class="fas fa-user"></i>
+                     <b class="caret"></b>
+                  </a>
+
+                  <?php if ($userDetails) { ?>
+                  <ul class="dropdown-menu">
+                     <li>
+                        <a href="request_resources.php?id=<?php echo $userId ?>">Request resources <i class="fab fa-joomla"></i></a>
+                     </li>
+                     <li class="divider"></li>
                      <li>
                         <a href="logOut.php">Sign out 
                            <i class="fas fa-sign-out-alt"></i>
                         </a>
                      </li>
+                  </ul>
+
+                  <?php  } else { ?>
+                  <ul class="dropdown-menu dropdown-with-icons">
                      <li>
                         <a href="register.php?">Register <i class="fas fa-user-plus"></i></a>
                      </li>
                      <li>
                         <a href="signIn.php?">Log in <i class="fas fa-sign-in-alt"></i> </a>
                      </li>
-                      <li>
-                        <a href="index.php?">home</a>
+                     <li>
+                        <a href="request_resources.php">Request resources <i class="fab fa-joomla"></i></a>
                      </li>
-
-                    
                   </ul>
-              
-           
+                  <?php  }; ?>
+               </li>
+            </ul>
          </div>
-         
       </div>
-   </nav>
+   </nav> 

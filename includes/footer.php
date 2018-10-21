@@ -1,3 +1,47 @@
+<!--     *********    BIG FOOTER     *********      -->
+
+<footer class="footer footer-black footer-big">
+<div class="container">
+
+    <ul class="pull-left">
+    <li>
+      <a href="#pablo">
+         Blog
+      </a>
+    </li>
+    <li>
+      <a href="#pablo">
+         Presentation
+      </a>
+    </li>
+    <li>
+      <a href="#pablo">
+         Discover
+      </a>
+    </li>
+    <li>
+      <a href="#pablo">
+         Payment
+      </a>
+    </li>
+    <li>
+      <a href="#pablo">
+         Contact Us
+      </a>
+    </li>
+   </ul>
+
+   <div class="copyright pull-right">
+    Copyright &copy;
+    <script>
+      document.write(new Date().getFullYear())
+    </script> Naijahacks - Team - Erudite
+   </div>
+   </div>
+   </footer>
+
+</body>
+
 
 <!--   Core JS Files   -->
 <script src="assets/js/jquery.min.js" type="text/javascript"></script>

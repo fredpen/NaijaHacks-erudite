@@ -1,6 +1,5 @@
 <?php
   $errorArray = array();
-  $url = "34";
    // getting error
    function errorGetter($error)  {
       global $errorArray;
@@ -40,42 +39,38 @@
 
    if (isset($_POST['registerButton'])) {
 
-        // sanitize all inputs on clicking register
-        $firstName = sanitiseUsername($_POST['firstName']);
-        $lastName = sanitiseUsername($_POST['lastName']);
-        $email = sanitiseStrings($_POST['email']);
-        $contact = sanitiseStrings($_POST['contact']);
-        $password = sanitisePasswords($_POST['password']);
-        $category = $_POST['category'];
-        echo strlen($_POST['contact']);
-        $registerUser = $account->register($firstName, $lastName, $email, $contact, $password, $category);
+      // sanitize all inputs on clicking register
+      $firstName = sanitiseUsername($_POST['firstName']);
+      $lastName = sanitiseUsername($_POST['lastName']);
+      $email = sanitiseStrings($_POST['email']);
+      $password = sanitisePasswords($_POST['password']);
+      $category = $_POST['category'];
+      $contact = $_POST['contact'];
 
-        // check the logs for error from validating inputs
-        $errorArray = $account->errorLog();
+      $registerUser = $account->register($firstName, $lastName, $email, $password, $category, $contact);
 
-        // check if the registration is succesful and redirects to home
-        if ($registerUser) {
-           // $_SESSION['email'] = $email;
-          $url = $account->createurl();
+      // check the logs for error from validating inputs
+      $errorArray = $account->errorLog();
 
-          header("Location: $url");
+      // check if the registration is succesful and redirects to home
+      if ($registerUser) {
+         $_SESSION['email'] = $email;
+        header("Location: index.php");
+       }
 
-     }     
-   
+   }
 
-
-}
 // ----------------------------handling log in---------------------------
 
-  if (isset($_POST['loginButton'])) {
+    if (isset($_POST['loginButton'])) {
 
-    $email = sanitiseStrings($_POST['loginEmail']);
-    $password = sanitisePasswords($_POST['loginPassword']);
+      $email = sanitiseStrings($_POST['loginEmail']);
+      $password = sanitisePasswords($_POST['loginPassword']);
 
-    $loginUser = $account->login($email, $password);
+      $loginUser = $account->login($email, $password);
 
-    // check the logs for error from validating inputs
-    $errorArray = $account->errorLog();
+      // check the logs for error from validating inputs
+      $errorArray = $account->errorLog();
 
       if ($loginUser) {
          $_SESSION['email'] = $email;
