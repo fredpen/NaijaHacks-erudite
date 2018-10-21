@@ -41,7 +41,25 @@
 
          }
       }
-   
+     
+       // upload requests into the database
+      public function uploadInvestment($purpose, $duration, $userId){
+
+         // if not then push the request
+         $dt = date("Y-m-d h:i:s");
+
+         $sql = "INSERT INTO farmer VALUES('', '$userId', '$product', '$location', '$size', '$age', '$dt', '$purpose', '$collateral', '$duration')";
+
+         $query = mysqli_query($this->con, $sql);
+
+         if ($query) {
+            return true;
+         }else {
+            return false;
+
+         }
+      }
+
       // fetch all the requests from the database
       public function fetchRequests()
       {

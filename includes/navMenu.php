@@ -18,18 +18,14 @@
 <head>
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-   <link rel="icon" type="image/png" href="assets/images/logo.png">
+   <link rel="icon" type="image/png" href="assets/images/home.png">
    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <title>Naijahacks - Team Erudite</title>
 
-   <!--     Fonts and icons     -->
-  <!--  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" /> -->
+  
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
- <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
    <!-- CSS Files -->
    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -93,6 +89,9 @@
                      <li>
                         <a href="request_resources.php?id=<?php echo $userId ?>">Request resources <i class="fab fa-joomla"></i></a>
                      </li>
+                      <li>
+                        <a href="invest_resources.php">Invest resources <i class="fab fa-joomla"></i></a>
+                     </li>
                      <li class="divider"></li>
                      <li>
                         <a href="logOut.php">Sign out 
@@ -111,6 +110,9 @@
                      </li>
                      <li>
                         <a href="request_resources.php">Request resources <i class="fab fa-joomla"></i></a>
+                     </li>
+                      <li>
+                        <a href="invest_resources.php">Invest resources <i class="fab fa-joomla"></i></a>
                      </li>
                   </ul>
                   <?php  }; ?>
