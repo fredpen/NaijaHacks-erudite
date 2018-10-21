@@ -38,63 +38,6 @@
 }
 
 
-#bt-override .jumbotron{
-   margin: 20px 0 0 0;
-   color: #f8f9fa;
-   background-image: url("../images/bgdjdj13.jpg");
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-}
-
-.horizontal-break{
-   overflow: visible;
-   height: 30px;
-   border-style: solid;
-   border-color: #1e37406b;
-   border-width: 1px 0 0;
-   border-radius: 20px;
-   width: 310px;
-}
-
-hr{
-   margin: 0 auto;
-}
-
-.horizontal-break:before{
-   margin: 0;
-   display: block;
-   content: "";
-   height: 30px;
-   margin-top: -31px;
-   border-style: solid;
-   border-color: #1e37406b;
-   border-width: 0 0 1px;
-   border-radius: 20px;
-}
-
-/* ---------------------------------------------------sign up */
-#bt-override .topMargin{
-   margin-top: 98px;
-}
-#home .padding25{
-  padding: 25px;
-}
-
-#bt-override .btn-primary {
-   color: #f8f9fa;
-   background-color: #0f2028d1;
-   border-color: #2c505f6e;
-   border-radius: 25px;
-   padding: 0.5rem 1.3rem;
-   border-width: 1px;
-}
-
-#bt-override .btn-primary:hover {
-   border-width: 1px;
-   color: #17a2b8a6;
-}
-
 
 /* ---------------------------------------------the sign in page */
 #bt-override .styledForm{
@@ -120,11 +63,7 @@ hr{
    width: 100%;
 }
 
-.quoteIdText{
-   font-style: italic;
-   font-size: 12px;
-   color: grey;
-}
+
 
 #home .registerNav{
     display: flex;
@@ -137,16 +76,6 @@ hr{
 #home .rotating-card-container .manual-flip{
   width: 100% !important;
   height: unset !important;
-}
-
-p .like-image{
-   width: 25px;
-}
-
-#home .genre {
-   text-transform: capitalize;
-   color: white;
-   font-size: 11px;
 }
 
 .topMargin65{
