@@ -93,7 +93,7 @@
       // fetch all the details of a partcular post in a database
       public function fetchRequestDetails($requestId){
 
-         $sql = "SELECT farmer.id, farmer.userId, farmer.date, farmer.product, farmer.location, farmer.size, farmer.age, farmer.resources, farmer.collateral, farmer.duration, users.firstName, users.lastname, users.contact,  users.category
+         $sql = "SELECT farmer.id, farmer.userId, farmer.date, farmer.product, farmer.location, farmer.size, farmer.age, farmer.resources, farmer.collateral, farmer.duration, users.firstName, users.image,users.lastname, users.contact,  users.category
                    FROM farmer
                     INNER JOIN users ON farmer.userId= users.id
                         WHERE farmer.id='$requestId'";
