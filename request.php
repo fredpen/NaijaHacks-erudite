@@ -139,7 +139,7 @@
       <div class="container">
           <div class="row title-row">
               <div class="col-md-4 col-md-offset-8">
-          <button class="btn btn-primary pull-right"> <i class="far fa-eye"></i> 10 Investors have shown interest</button>
+          <button class="btn btn-round pull-right"> <i class="far fa-eye"></i> 10 Investors have shown interest</button>
               </div>
           </div>
       </div>
@@ -153,16 +153,16 @@
 
                        <div class="tab-content">
                             <div class="tab-pane" id="product-page1">
-                                 <img src="../assets/img/examples/product1.jpg"/>
+                                 <img src="assets/images/f2.jpeg"/>
                               </div>
                               <div class="tab-pane active" id="product-page2">
-                                  <img src="../assets/img/examples/product2.jpg"/>
+                                  <img src="assets/images/<?php echo $requestDetails['image']?>.jpeg"/>
                              </div>
                               <div class="tab-pane" id="product-page3">
-                                  <img src="../assets/img/examples/product3.jpg"/>
+                                  <img src="assets/images/f3.jpeg"/>
                               </div>
                               <div class="tab-pane" id="product-page4">
-                                  <img src="../assets/img/examples/product4.jpg"/>
+                                  <img src="assets/images/f4.jpeg"/>
                               </div>
                         </div>
                         <ul class="nav flexi-nav" role="tablist" id="flexiselDemo1">
@@ -170,107 +170,90 @@
 
 
                 <a href="#product-page1" role="tab" data-toggle="tab" aria-expanded="false">
-                  <img src="../assets/img/examples/product1.jpg"/>
+                  <img src="assets/images/f2.jpeg"/>
                 </a>
               </li>
               <li class="active">
                 <a href="#product-page2" role="tab" data-toggle="tab" aria-expanded="false">
-                  <img src="../assets/img/examples/product2.jpg"/>
+                  <img src="assets/images/<?php echo $requestDetails['image']?>.jpeg"/>
+                  
                 </a>
               </li>
               <li>
                 <a href="#product-page3" role="tab" data-toggle="tab" aria-expanded="false">
-                  <img src="../assets/img/examples/product3.jpg"/>
+                  <img src="assets/images/f3.jpeg"/>
                 </a>
               </li>
               <li>
                 <a href="#product-page4" role="tab" data-toggle="tab" aria-expanded="true">
-                  <img src="../assets/img/examples/product4.jpg"/>
+                  <img src="assets/images/f4.jpeg"/>
                 </a>
               </li>
-                        </ul>
+                       </ul>
                     </div>
+
+
                     <div class="col-md-6 col-sm-6">
-            <h2 class="title"> Becky Silk Blazer </h2>
-            <h3 class="main-price">$335</h3>
+            <h2 class="title"> <?php echo $requestDetails['firstName'] . " " . $requestDetails['lastname']. " farms"; ?></h4>  </h2>
+            <h3 class="main-price">Farm worth: #2,000,000</h3>
+            
             <div id="acordeon">
-                            <div class="panel-group" id="accordion">
-                          <div class="panel panel-border panel-default">
-                            <div class="panel-heading" role="tab" id="headingOne">
-                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <h4 class="panel-title">
-                                    Description
-                                    <i class="material-icons">keyboard_arrow_down</i>
-                                    </h4>
-                                </a>
-                            </div>
-                            <div id="collapseOne" class="panel-collapse collapse in">
-                              <div class="panel-body">
-                                <p>Eres' daring 'Grigri Fortune' swimsuit has the fit and coverage of a bikini in a one-piece silhouette. This fuchsia style is crafted from the label's sculpting peau douce fabric and has flattering cutouts through the torso and back. Wear yours with mirrored sunglasses on vacation.</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="panel panel-border panel-default">
-                            <div class="panel-heading" role="tab" id="headingOne">
-                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-controls="collapseOne">
-                                    <h4 class="panel-title">
-                                    Designer Information
-                                    <i class="material-icons">keyboard_arrow_down</i>
-                                    </h4>
-                                </a>
-                            </div>
-                            <div id="collapseTwo" class="panel-collapse collapse">
-                              <div class="panel-body">
-                                An infusion of West Coast cool and New York attitude, Rebecca Minkoff is synonymous with It girl style. Minkoff burst on the fashion scene with her best-selling 'Morning After Bag' and later expanded her offering with the Rebecca Minkoff Collection - a range of luxe city staples with a "downtown romantic" theme.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="panel panel-border panel-default">
-                            <div class="panel-heading" role="tab" id="headingOne">
-                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-controls="collapseOne">
-                                    <h4 class="panel-title">
-                                    Details and Care
-                                    <i class="material-icons">keyboard_arrow_down</i>
-                                    </h4>
-                                </a>
-                            </div>
-                            <div id="collapseThree" class="panel-collapse collapse">
-                              <div class="panel-body">
-                                <ul>
-                                     <li>Storm and midnight-blue stretch cotton-blend</li>
-                                     <li>Notch lapels, functioning buttoned cuffs, two front flap pockets, single vent, internal pocket</li>
-                                     <li>Two button fastening</li>
-                                     <li>84% cotton, 14% nylon, 2% elastane</li>
-                                     <li>Dry clean</li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
+            <div class="panel-group" id="accordion">
+          <div class="panel panel-border panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <h4 class="panel-title">
+                    Farm Products
+                    <i class="material-icons">keyboard_arrow_down</i>
+                    </h4>
+                </a>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+              <div class="panel-body">
+               <p><?php echo $requestDetails['product']; ?></p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-border panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-controls="collapseOne">
+                    <h4 class="panel-title">
+                    Farm location
+                    <i class="material-icons">keyboard_arrow_down</i>
+                    </h4>
+                </a>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
+               <p><?php echo $requestDetails['location']; ?></p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-border panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-controls="collapseOne">
+                    <h4 class="panel-title">
+                    Resources needed
+                    <i class="material-icons">keyboard_arrow_down</i>
+                    </h4>
+                </a>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+              <div class="panel-body">
+              <p><?php echo $requestDetails['resources']; ?></p>
+              </div>
+            </div>
+          </div>
 
-                        </div>
-                        </div><!--  end acordeon -->
+        </div>
+        </div><!--  end acordeon -->
 
-                  <div class="row pick-size">
-                            <div class="col-md-6 col-sm-6">
-                                <label>Select color</label>
-                <select class="selectpicker" data-style="select-with-transition" data-size="7">
-                  <option value="1">Rose </option>
-                  <option value="2">Gray</option>
-                  <option value="3">White</option>
-                </select>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <label>Select size</label>
-                <select class="selectpicker" data-style="select-with-transition" data-size="7">
-                  <option value="1">Small </option>
-                  <option value="2">Medium</option>
-                  <option value="3">Large</option>
-                </select>
-                            </div>
-                        </div>
-                        <div class="row text-right">
-                            <button class="btn btn-rose btn-round">Add to Cart &nbsp;<i class="material-icons">shopping_cart</i></button>
-                        </div>
+
+                        <div class="stats">
+                    <button type="button" rel="tooltip" title="Saved to Wishlist" class="btn btn-just-icon btn-simple btn-rose">
+                      <i class="material-icons">favorite</i>
+                    </button>
+                                </div>
                     </div>
                 </div>
             </div>
