@@ -53,7 +53,7 @@
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">
+            <a class="navbar-brand" href="index.html">
                <i class="fas fa-home"></i> Agriloan 
             </a>
          </div>
@@ -61,22 +61,22 @@
             <ul class="nav navbar-nav navbar-right">
                <?php if ($userDetails) { ?>
                <li>
-                  <a href="profilePage.php?id=<?php echo $userDetails['id']; ?>"><?php echo $userDetails['lastname']; ?>
+                  <a href="#>"><?php echo $userDetails['lastname']; ?>
                      <i class="fas fa-user-edit"></i>
                   </a>
                </li>
                <?php  }; ?>
                <li>
-                  <a href="blog/home.php">
+                  <a href="investor.php">
                      <i class="fas fa-newspaper"></i>  Investors 
                   </a>
                </li>
                <li>
-                  <a href="authors.php">
+                  <a href="index.php">
                   <i class="fas fa-book-reader"></i> Farmers</a>
                </li>
                <li>
-                  <a href="genre.php">About us</a>
+                  <a href="request_resources.php?id=<?php echo $userId ?>">Request resources <i class="fab fa-joomla"></i></a>
                </li>
                <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -86,9 +86,6 @@
 
                   <?php if ($userDetails) { ?>
                   <ul class="dropdown-menu">
-                     <li>
-                        <a href="request_resources.php?id=<?php echo $userId ?>">Request resources <i class="fab fa-joomla"></i></a>
-                     </li>
                       <li>
                         <a href="invest_resources.php">Invest resources <i class="fab fa-joomla"></i></a>
                      </li>
@@ -108,9 +105,7 @@
                      <li>
                         <a href="signIn.php?">Log in <i class="fas fa-sign-in-alt"></i> </a>
                      </li>
-                     <li>
-                        <a href="request_resources.php">Request resources <i class="fab fa-joomla"></i></a>
-                     </li>
+                    
                       <li>
                         <a href="invest_resources.php">Invest resources <i class="fab fa-joomla"></i></a>
                      </li>

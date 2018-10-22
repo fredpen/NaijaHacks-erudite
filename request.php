@@ -1,15 +1,14 @@
 <?php
-
+ if (isset($_GET['id'])) {
+    $requestId = $_GET['id'];
+  }else{
+    header("location: index.php");
+  }
       require_once 'includes/databaseConfig.php';
       require_once 'includes/classes/Account.php';
       require_once 'includes/classes/Request.php';
 
-      // // variables
-      //  $userId;
-      // $userDetails;
-
-
-      $account = new Account($con);
+       $account = new Account($con);
       $request = new Request($con);
 
 
@@ -21,12 +20,7 @@
       } else {
          $userId = '';
          }
-  if (isset($_GET['id'])) {
-    $requestId = $_GET['id'];
-    echo $requestId;
-  }else{
-    header("location: index.php");
-  }
+ 
 
   $requestDetails = $request->fetchRequestDetails($requestId);
 
@@ -139,7 +133,7 @@
       <div class="container">
           <div class="row title-row">
               <div class="col-md-4 col-md-offset-8">
-          <button class="btn btn-round pull-right"> <i class="far fa-eye"></i> 10 Investors have shown interest</button>
+          <button class="btn btn-round btn-rose pull-right"> <i class="far fa-eye"></i> 10 Investors have shown interest</button>
               </div>
           </div>
       </div>
@@ -200,6 +194,7 @@
             <div id="acordeon">
             <div class="panel-group" id="accordion">
           <div class="panel panel-border panel-default">
+
             <div class="panel-heading" role="tab" id="headingOne">
                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     <h4 class="panel-title">
@@ -214,51 +209,82 @@
               </div>
             </div>
           </div>
+
+
           <div class="panel panel-border panel-default">
             <div class="panel-heading" role="tab" id="headingOne">
                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-controls="collapseOne">
                     <h4 class="panel-title">
-                    Farm location
+                    Farm location, age and size
                     <i class="material-icons">keyboard_arrow_down</i>
                     </h4>
                 </a>
             </div>
             <div id="collapseTwo" class="panel-collapse collapse">
               <div class="panel-body">
-               <p><?php echo $requestDetails['location']; ?></p>
+               <p>location :<?php echo $requestDetails['location']; ?></p>
+               <p>Age: <?php echo $requestDetails['age']; ?></p>
+               <p>Size: <?php echo $requestDetails['size']; ?></p>
               </div>
             </div>
           </div>
+
           <div class="panel panel-border panel-default">
             <div class="panel-heading" role="tab" id="headingOne">
                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-controls="collapseOne">
                     <h4 class="panel-title">
-                    Resources needed
+                    Resources needed, duration and collateral
                     <i class="material-icons">keyboard_arrow_down</i>
                     </h4>
                 </a>
             </div>
-            <div id="collapseThree" class="panel-collapse collapse">
+              <div id="collapseThree" class="panel-collapse collapse">
               <div class="panel-body">
-              <p><?php echo $requestDetails['resources']; ?></p>
+              <p>Collateral: <?php echo $requestDetails['collateral']; ?></p>
+              <p>Duration: <?php echo $requestDetails['duration']; ?></p>
+              <p>Resources: <?php echo $requestDetails['resources']; ?></p>
               </div>
             </div>
           </div>
 
-        </div>
+          
+           <div class="panel panel-border panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefive" aria-controls="collapseOne">
+                    <h4 class="panel-title">
+                   Farmers Contact 
+                    <i class="material-icons">keyboard_arrow_down</i>
+                    </h4>
+                </a>
+            </div>
+            <div id="collapsefive" class="panel-collapse collapse">
+              <div class="panel-body">
+              <p>Email: <?php echo $requestDetails['email']; ?></p>
+              <p>Phone Number: <?php echo $requestDetails['contact']; ?></p>
+              </div>
+            </div>
+          </div>
+
+           
+
+                  </div>
         </div><!--  end acordeon -->
+<div class="row text-gray text-left">
+     By clicking the button below you give your consent to share your interest with  <?php echo $requestDetails['firstName'] . " " . $requestDetails['lastname'] ?> on his farm
+  </div>
+
+  <div class="row text-center">
+      <a href="sendMessage.php?id=<?php echo $requestDetails['contact']?>&mail=<?php echo $requestDetails['email'] ?> " name="submit" class="btn btn-rose btn-round">send a Message to <?php echo $requestDetails['firstName'] . " " . $requestDetails['lastname'] ?> with twillo
+      <i class="material-icons">message</i></a>
+  </div>
 
 
-                        <div class="stats">
-                    <button type="button" rel="tooltip" title="Saved to Wishlist" class="btn btn-just-icon btn-simple btn-rose">
-                      <i class="material-icons">favorite</i>
-                    </button>
-                                </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            </div>
+          
+          </div>
+      </div>
+  </div>
+  </div>
+  </div>
 
            
 

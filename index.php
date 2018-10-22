@@ -2,11 +2,32 @@
   require_once 'includes/header.php';
 
   $requestArray = $request->fetchRequests();
-
+  if (isset($_GET['status'])) {
+    $success = $_GET['status'];
+  }else{
+    $success = "";
+  }
 ?>
+<div class="spacer"></div>
+ <?php if ($success) { ?>
+        <div id="errorDiv" class='alert alert-info alert-dismissible col-sm-12' role='alert'>
+        <div class="container">
+        <div class="row">
+        <div class="col-sm-10 col-md-offset-1">
+           A sms and an email has been sent to notify the farmer
+           <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+              <span aria-hidden='true'>&times;</span>
+           </button>
+        </div>
+        </div>
+        </div>
+        </div>
+    <?php }; ?>
+
+
 	<div class="container">
 		<div class="row">
-<div class="col-sm-12 topMargin80"></div>
+<div class="col-sm-12 topMargin8"></div>
 
 
 
