@@ -96,6 +96,7 @@
                         </a>
                      </li>
                   </ul>
+                  
 
                   <?php  } else { ?>
                   <ul class="dropdown-menu dropdown-with-icons">
