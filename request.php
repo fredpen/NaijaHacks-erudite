@@ -20,7 +20,7 @@
       } else {
          $userId = '';
          }
- 
+
 
   $requestDetails = $request->fetchRequestDetails($requestId);
 
@@ -51,7 +51,7 @@
 
 <body class="product-page">
   <nav class="navbar navbar-primary navbar-transparent navbar-fixed-top navbar-color-on-scroll" color-on-scroll="100">
-      <div class="container">     
+      <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
          <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse">
@@ -61,30 +61,27 @@
                <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="index.php">
-               <i class="fas fa-home"></i> Agriloan 
+               <i class="fas fa-home"></i> Agriloan
             </a>
          </div>
          <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                <?php if ($userDetails) { ?>
                <li>
-                  <a href="profilePage.php?id=<?php echo $userDetails['id']; ?>"><?php echo $userDetails['lastname']; ?>
-                     <i class="fas fa-user-edit"></i>
+                  <a href="profilePage.php?id=<?php echo $userDetails['id'];?>"><?php echo $userDetails['lastname']; ?>
                   </a>
                </li>
                <?php  }; ?>
                <li>
-                  <a href="blog/home.php">
-                     <i class="fas fa-newspaper"></i>  Investors 
+                <a href="investors.php">
+                  Investors
                   </a>
                </li>
                <li>
                   <a href="authors.php">
-                  <i class="fas fa-book-reader"></i> Farmers</a>
+                  </i> Farmers</a>
                </li>
-               <li>
-                  <a href="genre.php">About us</a>
-               </li>
+
                <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                      <i class="fas fa-user"></i>
@@ -94,14 +91,14 @@
                   <?php if ($userDetails) { ?>
                   <ul class="dropdown-menu">
                      <li>
-                        <a href="request_resources.php?id=<?php echo $userId ?>">Request resources <i class="fab fa-joomla"></i></a>
+                        <a href="request_resources.php?id=<?php echo $userId ?>">Request resources </i></a>
                      </li>
                       <li>
                         <a href="invest_resources.php">Invest resources <i class="fab fa-joomla"></i></a>
                      </li>
                      <li class="divider"></li>
                      <li>
-                        <a href="logOut.php">Sign out 
+                        <a href="logOut.php">Sign out
                            <i class="fas fa-sign-out-alt"></i>
                         </a>
                      </li>
@@ -170,7 +167,7 @@
               <li class="active">
                 <a href="#product-page2" role="tab" data-toggle="tab" aria-expanded="false">
                   <img src="assets/images/<?php echo $requestDetails['image']?>.jpeg"/>
-                  
+
                 </a>
               </li>
               <li>
@@ -190,7 +187,7 @@
                     <div class="col-md-6 col-sm-6">
             <h2 class="title"> <?php echo $requestDetails['firstName'] . " " . $requestDetails['lastname']. " farms"; ?></h4>  </h2>
             <h3 class="main-price">Farm worth: #2,000,000</h3>
-            
+
             <div id="acordeon">
             <div class="panel-group" id="accordion">
           <div class="panel panel-border panel-default">
@@ -247,12 +244,12 @@
             </div>
           </div>
 
-          
+
            <div class="panel panel-border panel-default">
             <div class="panel-heading" role="tab" id="headingOne">
                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefive" aria-controls="collapseOne">
                     <h4 class="panel-title">
-                   Farmers Contact 
+                   Farmers Contact
                     <i class="material-icons">keyboard_arrow_down</i>
                     </h4>
                 </a>
@@ -265,7 +262,7 @@
             </div>
           </div>
 
-           
+
 
                   </div>
         </div><!--  end acordeon -->
@@ -279,20 +276,20 @@
   </div>
 
 
-          
+
           </div>
       </div>
   </div>
   </div>
   </div>
 
-           
+
 
 
 <footer class="footer footer-black footer-big">
   <div class="container">
 
-   
+
 
     <ul class="pull-left">
       <li>
