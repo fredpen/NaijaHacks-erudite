@@ -40,14 +40,14 @@
 
 							<div class="input-group">
 								<div class="input-group-addon">
-									<i class="material-icons">face</i>
+									<i class="fas fa-user"></i>
 								</div>
 								<input type="text" name="loginEmail" value="<?php getInputValue('loginEmail');?>" class="form-control" placeholder="Email or Username">
 							</div>
 
 							<div class="input-group">
 								<span class="input-group-addon">
-									<i class="material-icons">lock_outline</i>
+									<i class="fas fa-unlock"></i>
 								</span>
 								<input type="password" name="loginPassword" placeholder="Password..." class="form-control"/>
 							</div>
@@ -59,7 +59,7 @@
 		              				<a href="#">Forget password? Reset</a>
 		              			</p>
 		              		</div>
-		              	</div>						
+		              	</div>
 					</form>
 				</div>
 			</div>
@@ -67,6 +67,6 @@
 	</div>
 </div>
 
-<?php 
+<?php
 require_once 'includes/footer.php';
  ?>
